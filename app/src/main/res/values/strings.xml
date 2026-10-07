@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FleetTrackPro</string>
+    <string name="hub_title">Manifest Pengiriman</string>
+    <string name="hub_subtitle">Hub Kurir Cirebon • Logistik Operasional</string>
+    <string name="search_hint">Cari no resi, penerima, atau alamat...</string>
+    <string name="status_pending">PENDING</string>
+    <string name="status_delivered">DELIVERED</string>
+    <string name="status_on_delivery">DALAM PENGIRIMAN</string>
+    <string name="action_mark_delivered">Tandai Terkirim</string>
+    <string name="status_delivered_done">Paket Telah Diterima</string>
+    <string name="empty_manifest_title">Tidak Ada Paket</string>
+    <string name="empty_manifest_desc">Tidak ada data paket pengiriman yang cocok dengan filter atau pencarian Anda.</string>
+</resources>

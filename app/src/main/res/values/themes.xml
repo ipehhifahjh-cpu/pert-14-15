@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Application Theme using Material 3 -->
+    <style name="Theme.FleetTrack" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/slate_800</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/slate_100</item>
+        <item name="colorOnPrimaryContainer">@color/slate_900</item>
+        <item name="colorSecondary">@color/emerald_600</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:statusBarColor">@color/slate_900</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">@color/slate_50</item>
+    </style>
+
+    <style name="Theme.MyApplication" parent="Theme.FleetTrack" />
+</resources>

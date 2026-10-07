@@ -1,0 +1,6 @@
+{
+  "name": "FleetTrackPro",
+  "description": "Aplikasi Manajemen Logistik Kurir Cirebon FleetTrackPro dengan pelacakan paket, offline-first Room DB, dan visual modern.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

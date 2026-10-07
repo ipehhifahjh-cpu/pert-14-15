@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardDeliveryOrder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardMaxElevation="4dp"
+    app:rippleColor="@color/slate_100"
+    app:strokeColor="@color/slate_200"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Row: Tracking Number (Resi) & Status Pill Badge -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="6dp"
+                    android:contentDescription="Package Icon"
+                    android:src="@drawable/ic_package"
+                    app:tint="@color/slate_500" />
+
+                <TextView
+                    android:id="@+id/tvTrackingNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.03"
+                    android:text="CRB-89104-JKT"
+                    android:textColor="@color/slate_700"
+                    android:textSize="13sp"
+                    tools:text="CRB-89104-JKT" />
+            </LinearLayout>
+
+            <!-- Status Badge Capsule/Pill -->
+            <TextView
+                android:id="@+id/tvStatusBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_badge_pending"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.04"
+                android:paddingStart="12dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="4dp"
+                android:text="PENDING"
+                android:textColor="@color/status_pending_text"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                tools:text="PENDING" />
+        </LinearLayout>
+
+        <!-- Subtle Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/slate_100" />
+
+        <!-- Recipient Name (Bold, Prominent) -->
+        <TextView
+            android:id="@+id/tvRecipientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-bold"
+            android:text="Budi Santoso"
+            android:textColor="@color/slate_900"
+            android:textSize="17sp"
+            tools:text="Budi Santoso" />
+
+        <!-- Recipient Phone with Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Phone Icon"
+                android:src="@drawable/ic_phone"
+                app:tint="@color/slate_500" />
+
+            <TextView
+                android:id="@+id/tvPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0812-3456-7890"
+                android:textColor="@color/slate_600"
+                android:textSize="13sp"
+                tools:text="0812-3456-7890" />
+        </LinearLayout>
+
+        <!-- Recipient Address with Location Pin Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Address Icon"
+                android:src="@drawable/ic_location_pin"
+                app:tint="@color/slate_500" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="2dp"
+                android:text="Jl. Siliwangi No. 45, Kejaksan, Kota Cirebon"
+                android:textColor="@color/slate_600"
+                android:textSize="13sp"
+                tools:text="Jl. Siliwangi No. 45, Kejaksan, Kota Cirebon" />
+        </LinearLayout>
+
+        <!-- Bottom Action Bar: COD / Non-COD Tag & Action Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- COD / Payment Badge Tag -->
+            <LinearLayout
+                android:id="@+id/containerCodBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_badge_cod"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/ivCodIcon"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="COD Icon"
+                    android:src="@drawable/ic_cod" />
+
+                <TextView
+                    android:id="@+id/tvCodAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="COD: Rp 145.000"
+                    android:textColor="@color/amber_700"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:text="COD: Rp 145.000" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- Action Button: Tandai Terkirim (DELIVERED) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMarkDelivered"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:letterSpacing="0.02"
+                android:text="Tandai Terkirim"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/emerald_500"
+                app:cornerRadius="10dp"
+                app:elevation="0dp"
+                app:icon="@drawable/ic_check_circle"
+                app:iconGravity="textStart"
+                app:iconPadding="6dp"
+                app:iconSize="16dp"
+                app:iconTint="@color/white"
+                app:rippleColor="@color/emerald_200" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
